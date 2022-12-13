@@ -1,0 +1,17 @@
+<p>ngx-Loader Component works!</p>
+
+<!--============== Navbar & Router-Link =======================-->
+<div class="example-button-row">
+    <button mat-raised-button color="accent" routerLink="studentData" routerLinkActive="active"
+        (click)="enableDisableRule()">
+        Student Data Component
+    </button>
+    <button mat-raised-button color="accent" routerLink="studentFile" routerLinkActive="active" (click)="
+        enableDisableRule()">
+        Student File Component
+    </button>
+</div>
+
+<section [ngClass]="{'mediumYellow' : !toggle, 'greenTeal': toggle}">
+    <router-outlet></router-outlet>
+</section>

@@ -1,0 +1,17 @@
+<p>custom-loader Component works!</p>
+
+<!--============== Navbar & Router-Link =======================-->
+<div class="example-button-row">
+    <button mat-raised-button color="warn" routerLink="userData" routerLinkActive="active"
+        (click)="enableDisableRule()">
+        User-Data Component
+    </button>
+    <button mat-raised-button color="warn" routerLink="userFile" routerLinkActive="active"
+        (click)="enableDisableRule()">
+        User-File Component
+    </button>
+</div>
+
+<section [ngClass]="{'orangeRed' : !toggle, 'skyBlue': toggle}">
+    <router-outlet></router-outlet>
+</section>
