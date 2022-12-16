@@ -1,1 +1,14 @@
-<p>user-file Component works!</p>
+<h1 class="heading">* Loader with Interceptor Get Comment using Json Api in Student Component *</h1>
+
+<table id="user_data_table">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    <tr *ngFor="let comment of userComment">
+        <td>{{comment.id}}</td>
+        <td>{{comment.name}}</td>
+        <td>{{comment.email}}</td>
+    </tr>
+</table>

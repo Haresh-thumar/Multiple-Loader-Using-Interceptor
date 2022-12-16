@@ -9,9 +9,12 @@ export class CustomLoaderComponent implements OnInit {
 
   toggle = true;
 
+  userFile: any;
+
   constructor() { }
 
   ngOnInit(): void {
+    this
   }
 
   enableDisableRule() {

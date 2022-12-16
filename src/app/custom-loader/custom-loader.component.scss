@@ -1,23 +1,28 @@
-.example-button-row button {
-    width: 200px;
-    margin: 8px 8px 8px 5px;
-    padding: 2px;
-    font-size: 16px;
-    font-family: 'Ubuntu', sans-serif !important;
+button {
+  width: 200px;
+  margin: 8px 8px 8px 5px;
+  padding: 2px;
+  font-size: 16px;
+  display: inline;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
 }
 
 .orangeRed {
-    margin: 5px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgb(155, 156, 253);
-    background: #F2A07B;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(155, 156, 253);
+  background: #f2a07b;
 }
 
 .skyBlue {
-    margin: 5px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgb(155, 156, 253);
-    background: #59cc42;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #f44336;
+  background: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
 }

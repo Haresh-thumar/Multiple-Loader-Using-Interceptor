@@ -1,17 +1,21 @@
-<p>custom-loader Component works!</p>
+<!--============== Custom CSS Loader ==========================-->
+<app-loader></app-loader>
 
 <!--============== Navbar & Router-Link =======================-->
-<div class="example-button-row">
-    <button mat-raised-button color="warn" routerLink="userData" routerLinkActive="active"
-        (click)="enableDisableRule()">
-        User-Data Component
+<mat-toolbar color="warn" style="width: 100%!important; margin: 0px 10px 20px 5px; border-radius: 10px;">
+  <mat-toolbar-row style="width: 95%; margin: 0 auto;">
+    <button mat-raised-button routerLink="userData" routerLinkActive="active" (click)="enableDisableRule()">
+      User-Data Component
     </button>
-    <button mat-raised-button color="warn" routerLink="userFile" routerLinkActive="active"
-        (click)="enableDisableRule()">
-        User-File Component
+    <button mat-raised-button routerLink="userFile" routerLinkActive="active" (click)="enableDisableRule()">
+      User-File Component
     </button>
-</div>
+    <span class="example-spacer"></span>
+    <span>{{2+2}}</span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
 
 <section [ngClass]="{'orangeRed' : !toggle, 'skyBlue': toggle}">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </section>

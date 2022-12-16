@@ -1,1 +1,14 @@
-<p>user-data Component works!</p>
+<h1 class="heading">* Loader with Interceptor Get Data using Json Api in User Component *</h1>
+
+<table id="user_data_table">
+    <tr>
+        <th class="th-1">Id</th>
+        <th>Title</th>
+        <th>Body</th>
+    </tr>
+    <tr *ngFor="let item of userData; let i = index">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+    </tr>
+</table>
