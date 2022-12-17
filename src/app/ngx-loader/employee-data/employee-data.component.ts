@@ -1,3 +1,4 @@
+import { EmployeeDataService } from './../services/employee-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeDataComponent implements OnInit {
 
-  constructor() { }
+  employeeData: any = [];
+
+  constructor(private _employeeData: EmployeeDataService) { }
 
   ngOnInit(): void {
+    this._employeeData.getPost().subscribe((res) => {
+      this.employeeData = res;
+    });
   }
 
 }

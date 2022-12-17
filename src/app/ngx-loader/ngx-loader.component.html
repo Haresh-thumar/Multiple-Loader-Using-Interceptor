@@ -1,17 +1,24 @@
-<p>ngx-Loader Component works!</p>
+<!--================ Ngx-ui-loader ===============-->
+<!-- <ngx-ui-loader fgsColor="red" pbColor="red" text="please wait..." fgsType="square-jelly-box"
+  bdColor="rgba(255, 255, 255, 0.5)" color="white"></ngx-ui-loader> -->
 
+
+<!-- <div ngxUiLoaderBlurred [blur]="10"> -->
+<!--============= Component title ============-->
+<p>ngx-Loader Component works!</p>
 <!--============== Navbar & Router-Link =======================-->
 <div class="example-button-row">
-    <button mat-raised-button color="accent" routerLink="studentData" routerLinkActive="active"
-        (click)="enableDisableRule()">
-        Student Data Component
-    </button>
-    <button mat-raised-button color="accent" routerLink="studentFile" routerLinkActive="active" (click)="
+  <button mat-raised-button color="accent" routerLink="employeeData" routerLinkActive="active"
+    (click)="enableDisableRule()">
+    Employee Data Component
+  </button>
+  <button mat-raised-button color="accent" routerLink="employeeFile" routerLinkActive="active" (click)="
         enableDisableRule()">
-        Student File Component
-    </button>
+    Employee File Component
+  </button>
 </div>
 
 <section [ngClass]="{'mediumYellow' : !toggle, 'greenTeal': toggle}">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </section>
+<!-- </div> -->

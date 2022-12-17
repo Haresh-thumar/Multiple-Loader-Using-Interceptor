@@ -24,6 +24,12 @@ export class StudentFileComponent implements OnInit {
       switchMap(() => this._studentFile.getComment())).subscribe(res => {
         this.jsonComment = res;
       });
+
+    // setTimeout(() => {
+    //   this._studentFile.getComment().subscribe(res => {
+    //     this.jsonComment = res;
+    //   })
+    // }, 2000);
   }
 
   ngOnDestroy() {

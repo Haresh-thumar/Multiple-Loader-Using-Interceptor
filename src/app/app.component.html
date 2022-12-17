@@ -1,10 +1,38 @@
+<ngx-ui-loader fgsColor="red" pbColor="red" text="please wait..." fgsType="square-jelly-box"
+  bdColor="rgba(255, 255, 255, 0.5)" color="white"></ngx-ui-loader>
+
 <!--============== Navbar & Router-Link =======================-->
-<ul class="main-nav">
+<div ngxUiLoaderBlurred [blur]="10">
+  <ul class="main-nav">
     <li><a routerLink="/customLoader" routerLinkActive="active">Custom-Loader</a></li>
     <li><a routerLink="/matProgressBar" routerLinkActive="active">mat-Progress-Bar</a></li>
     <li><a routerLink="/ngxLoader" routerLinkActive="active">Ngx-Loader</a></li>
-</ul>
+  </ul>
 
-<section class="outer-outlet-body">
+  <section class="outer-outlet-body">
     <router-outlet></router-outlet>
-</section>
+  </section>
+</div>
+
+
+
+
+<!--************************ Special Instruction For ngx-ui-loader ************************-->
+
+<!--============== command for install ==============-->
+<!-- npm i --save ngx-ui-loader -->
+
+<!--============== related website ==============-->
+<!-- https://tdev.app/ngx-ui-loader -->
+<!-- https://www.npmjs.com/package/ngx-spinner -->
+<!-- https://tdev.app/ngx-ui-loader/demo/ -->
+
+<!--============== more spinners examples ==============-->
+<!-- https://tdev.app/ngx-ui-loader/demo/spinners -->
+
+<!--========== Ngx-ui-loader call in ts file ==========-->
+<!--// this.ngxService.start();  ====>  start foreground spinner of the master loader with 'default' taskId -->
+<!--// Stop the foreground loading after 5s -->
+<!-- setTimeout(() => {
+this.ngxService.stop();  // stop foreground spinner of the master loader with 'default' taskId
+}, 5000); -->

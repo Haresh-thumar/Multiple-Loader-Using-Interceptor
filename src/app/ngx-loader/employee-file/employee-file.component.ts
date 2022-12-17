@@ -1,3 +1,4 @@
+import { EmployeeDataService } from './../services/employee-data.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeFileComponent implements OnInit {
 
-  constructor() { }
+  employeeComment: any = [];
+
+  constructor(private _employeeComment: EmployeeDataService) { }
 
   ngOnInit(): void {
+    this.gerData();
+  }
+
+  gerData() {
+    this._employeeComment.getComment().subscribe((res) => {
+      this.employeeComment = res;
+    });
   }
 
 }

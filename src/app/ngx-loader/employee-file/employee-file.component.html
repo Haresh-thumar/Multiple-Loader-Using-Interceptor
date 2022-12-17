@@ -1,1 +1,16 @@
-<p>employee-file works!</p>
+<h1>* employee-file Component working... *</h1>
+
+<table id="employee_file_table">
+  <tr>
+    <th class="th-1">Id</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Body</th>
+  </tr>
+  <tr *ngFor="let comment of employeeComment">
+    <td>{{comment.id}}</td>
+    <td>{{comment.name}}</td>
+    <td>{{comment.email}}</td>
+    <td>{{comment.body}}</td>
+  </tr>
+</table>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-ngx-loader',
@@ -9,7 +10,7 @@ export class NgxLoaderComponent implements OnInit {
 
   toggle = true;
 
-  constructor() { }
+  constructor(private ngxService: NgxUiLoaderService) { }
 
   ngOnInit(): void {
   }

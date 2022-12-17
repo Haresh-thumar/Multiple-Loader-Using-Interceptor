@@ -6,6 +6,8 @@ import { EmployeeDataComponent } from './employee-data/employee-data.component';
 import { EmployeeFileComponent } from './employee-file/employee-file.component';
 import { NgxLoaderComponent } from './ngx-loader.component';
 import { MatButtonModule } from '@angular/material/button';
+// import { NgxUiLoaderHttpModule, NgxUiLoaderModule } from "ngx-ui-loader";
+import { EmployeeDataService } from './services/employee-data.service';
 
 
 @NgModule({
@@ -17,8 +19,11 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [
     CommonModule,
     NgxLoaderRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    // NgxUiLoaderModule,
+    // NgxUiLoaderHttpModule.forRoot({ showForeground: true, })
   ],
+  providers: [EmployeeDataService]
 })
 export class NgxLoaderModule {
   constructor() {
