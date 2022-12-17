@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   {
     path: 'matProgressBar',
-    loadChildren: () => import('./mat-pregress-bar/mat-progress-bar.module').then(mod => mod.MatProgressBarModule)
+    loadChildren: () => import('./mat-pregress-bar/mat-progress-bar.module').then(mod => mod.MatProgressBarModules)
   },
   {
     path: 'ngxLoader',

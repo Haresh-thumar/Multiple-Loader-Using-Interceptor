@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { JsonDataService } from '../services/json-data.service';
+import { Subscription, switchMap, timer } from 'rxjs';
 
 @Component({
   selector: 'app-student-file',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentFileComponent implements OnInit {
 
-  constructor() { }
+  jsonComment: any = [];
+
+  subscription !: Subscription;
+
+  constructor(private _studentFile: JsonDataService) { }
 
   ngOnInit(): void {
+    this.getComment();
+  }
+
+  getComment() {
+    this.subscription = timer(2000).pipe(
+      switchMap(() => this._studentFile.getComment())).subscribe(res => {
+        this.jsonComment = res;
+      });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 
 }

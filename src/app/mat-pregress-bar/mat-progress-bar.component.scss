@@ -1,23 +1,44 @@
 .example-button-row button {
-    width: 230px;
-    margin: 8px 8px 8px 5px;
-    padding: 2px;
-    font-size: 16px;
-    font-family: 'Ubuntu', sans-serif !important;
+  width: 230px;
+  margin: 8px 8px 8px 5px;
+  padding: 2px;
+  font-size: 16px;
+  font-family: 'Ubuntu', sans-serif !important;
 }
 
 .mediumYellow {
-    margin: 5px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgb(155, 156, 253);
-    background: #FEC260;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(155, 156, 253);
+  background: #FEC260;
 }
 
 .greenTeal {
-    margin: 5px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid rgb(155, 156, 253);
-    background: #03C4A1;
+  margin: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(155, 156, 253);
+  background: #03C4A1;
+}
+
+
+/*---------- for Loader css -----------*/
+.overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(74, 74, 74, .8);
+  z-index: 99999;
+}
+
+.spinner {
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: 99999;
 }
