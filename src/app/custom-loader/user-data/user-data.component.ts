@@ -13,9 +13,11 @@ export class UserDataComponent implements OnInit {
   constructor(private _userData: CustomLoaderService) { }
 
   ngOnInit(): void {
-    this._userData.getPost().subscribe((res) => {
-      this.userData = res;
-    });
+    setTimeout(() => {
+      this._userData.getPost().subscribe((res) => {
+        this.userData = res;
+      });
+    }, 3000);
   }
 
 }

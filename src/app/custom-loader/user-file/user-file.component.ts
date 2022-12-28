@@ -20,8 +20,6 @@ export class UserFileComponent implements OnInit {
   ngOnInit(): void {
     // call getData function from fetching service file api method
     this.gerData();
-
-
   }
 
 
@@ -32,10 +30,11 @@ export class UserFileComponent implements OnInit {
 
   // get data from service file
   gerData() {
+    setTimeout(() => {
     this._userData.getComment().subscribe((res) => {
       this.userComment = res;
       console.log('%c[ userComment ]', 'font-size:13px; background:pink; color:#bf2c9f;', this.userComment);
-    });
+    });},3000);
   }
 
 }
